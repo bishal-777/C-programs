@@ -3,9 +3,9 @@
 #include<math.h>
 #define pi 3.14
 
-int cube(int);
-int cylinder (int,int);
-int cuboid(int,int,int);
+int vol(int);
+int vol (int,int);
+int vol(int,int,int);
 
 using namespace std;
 int main() {
@@ -17,19 +17,19 @@ int main() {
         case 1:
         cout<<"Enter length of cube"<<'\n';
         cin>>l1;
-        cout<<"Area of cube="<<cube(l1)<<'\n';
+        cout<<"Area of cube="<<vol(l1)<<'\n';
         break;
 
         case 2:
         cout<<"Enter radius and height of cylinder:"<<'\n';
         cin>>r2>>h2;
-        cout<<"Area of cylinder="<<cylinder(r2,h2)<<'\n';
+        cout<<"Area of cylinder="<<vol(r2,h2)<<'\n';
         break;
 
         case 3:
          cout<<"Enter length,breadth and height of cylinder:"<<'\n';
         cin>>l3>>b3>>h3;
-        cout<<"Area of rectangular box(Cuboid)="<<cuboid(l3,b3,h3)<<'\n';
+        cout<<"Area of rectangular box(Cuboid)="<<vol(l3,b3,h3)<<'\n';
         break;
 
         default:
@@ -40,19 +40,19 @@ int main() {
     return 0;
 }
 
-int cube(int l){
+int vol(int l){
     int a;
     a=pow(l,3);
     return a;
 }
 
-int cylinder(int r,int h){
+int vol(int r,int h){
     int a;
     a=pi*pow(r,2)*h;
     return a;
 }
 
-int cuboid(int l,int b,int h){
+int vol(int l,int b,int h){
     int a;
     a=l*b*h;
     return a;
